@@ -1,15 +1,15 @@
 # AWS Mobile SDK for macOS
 
-The `aws-sdk-macos` branch of this fork is a port of version 2.8.2 of the AWS Mobile SDK for iOS to macOS. The port is only missing `AWSLex`, `AWSPinpoint`, and the `Cognito Auth` frameworks.
+The `aws-sdk-macos` branch of this fork is a port of version 2.8.2 of the AWS Mobile SDK for iOS to macOS. The port is only missing `AWSLex`, `AWSPinpoint`, and the `Cognito Auth` frameworks. These frameworks are closly tied to iOS and UIKit. Considerable work would need to go into them to make them work. Once Apple supports UIKit on macOS (sometime this year we hope), this should be much easier.
 
 To use the port in your macOS project:
-1. first clone or download this project to your Mac. 
+1. First clone or download this project to your Mac. 
 1. Be sure you are on the`aws-sdk-macos` branch, it's the default. Switch over to it if you are not. 
-1. Open the AWSmacOSSDKv2.xcodeproj. 
-1. Build each framework target you need. 
-1. Find the frameworks you need in the Products folder in Xcode. 
-1. Right-click on of them and View in Finder. 
-1. Then from the Finder, you can drag-n-drop the frameworks into your macOS project.
+1. Open the AWSmacOSSDKv2.xcodeproj. If Xcode asks to `Autocreate Schemes`, click `Automatically Create Schemes`.
+1. Build each framework target you need, by selecting the appropriate scheme in the Xcode tool bar.
+1. Find the frameworks you built in the Products folder in Xcode. The Products folder will be down at the bottom of all the listed folders in the file browser.
+1. Right-click on them and select View in Finder. 
+1. Then from the Finder, you can drag-n-drop the frameworks into your macOS project. Be sure to drag-n-drop the framework's directory. For example, drag-n-drop the `AWSS3.framework` directory you see in the Finder after building AWSS3 framework.
 
 NOTE: while all these frameworks build, they have not been tested against the SDKs unit tests. I have not figured out how to run them yet.
 
