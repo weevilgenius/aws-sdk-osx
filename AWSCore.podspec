@@ -1,18 +1,18 @@
 Pod::Spec.new do |s|
 
   s.name         = 'AWSCore'
-  s.version      = '2.9.1'
-  s.summary      = 'Amazon Web Services SDK for iOS.'
+  s.version      = '2.9.1.1'
+  s.summary      = 'Amazon Web Services SDK for OSX.'
 
-  s.description  = 'The AWS SDK for iOS provides a library, code samples, and documentation for developers to build connected mobile applications using AWS.'
+  s.description  = 'The AWS SDK for OSX provides a library, code samples, and documentation for developers to build connected Mac applications using AWS.'
 
   s.homepage     = 'http://aws.amazon.com/mobile/sdk'
   s.license      = 'Apache License, Version 2.0'
   s.author       = { 'Amazon Web Services' => 'amazonwebservices' }
-  s.platform     = :ios, '8.0'
-  s.source       = { :git => 'https://github.com/aws/aws-sdk-ios.git',
-                     :tag => s.version}
-  s.frameworks   = 'CoreGraphics', 'UIKit', 'Foundation', 'SystemConfiguration', 'Security'
+  s.platform     = :osx, '10.12'
+  s.source       = { :git => 'https://github.com/weevilgenius/aws-sdk-osx.git',
+                     :tag => "osx-#{s.version}"}
+  s.frameworks   = 'CoreGraphics', 'AppKit', 'Foundation', 'SystemConfiguration', 'Security'
   s.libraries    = 'z', 'sqlite3'
   s.requires_arc = true
 
